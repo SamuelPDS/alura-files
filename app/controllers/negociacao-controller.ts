@@ -10,6 +10,7 @@ export class NegociacaoController{
     private negociacoes = new Negociacoes();
     private negociacoesView = new NegociacoesView('#negociacoesView')
     private mensageView = new MensagemView('#mensagemView');
+    
 
     constructor(){
         this.inputData = document.querySelector('#data');
