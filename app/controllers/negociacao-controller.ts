@@ -1,4 +1,5 @@
- import { Negociacao } from "../models/negociacao.js";
+ import { DiasDaSemana } from "../enums/dias-da-semana.js";
+import { Negociacao } from "../models/negociacao.js";
 import { Negociacoes } from "../models/negociacoes.js";
 import { MensagemView } from "../views/mensagem-view.js";
 import { NegociacoesView } from "../views/negociacoes-view.js";
@@ -10,6 +11,8 @@ export class NegociacaoController{
     private negociacoes = new Negociacoes();
     private negociacoesView = new NegociacoesView('#negociacoesView')
     private mensageView = new MensagemView('#mensagemView');
+    private readonly SABADO = 6;
+    private readonly DOMINGO = 0;
     
 
     constructor(){
@@ -19,17 +22,20 @@ export class NegociacaoController{
         this.negociacoesView.update(this.negociacoes);
     }
 
-    adiciona(): void {
+    public adiciona(): void {
             const negociacao = this.CriaNegociacao();
+            if(!this.DiaUtl(negociacao.data)){
+                this.mensageView.update('Apenas negociações em dias úteis são aceitas');
+                return;
+            }
+            
             this.negociacoes.adiciona(negociacao);
-            this.negociacoes.listar();
-            console.log(this.negociacoes.listar());
-            this.negociacoesView.update(this.negociacoes);
-            this.mensageView.update('Negociação adicionada com sucesso');
             this.LimparFormulario();
+            this.atualizaView();
+  
         }
     
-        CriaNegociacao(): Negociacao {
+        private CriaNegociacao(): Negociacao {
             const exp = /-/g;
         const date = new Date(this.inputData.value.replace(exp, ','));
         const quantidade = parseInt(this.inputQuantidade.value);
@@ -37,10 +43,19 @@ export class NegociacaoController{
         return new Negociacao( date, quantidade, valor); 
         }
 
-        LimparFormulario(): void{
+        private LimparFormulario(): void{
             this.inputData.value = '';
             this.inputQuantidade.value = '';
             this.inputValor.value = '';
             this.inputData.focus();
         }
+
+    private atualizaView(): void{
+        this.negociacoesView.update(this.negociacoes);
+        this.mensageView.update('Negociação adicionada com sucesso');
+    }
+
+    private DiaUtl(date: Date){
+        return date.getDay() > DiasDaSemana.DOMINGO && date.getDay() < DiasDaSemana.SABADO;
+    } 
 }

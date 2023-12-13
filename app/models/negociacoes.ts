@@ -4,12 +4,12 @@ export class Negociacoes {
     // private negociacoes: Negociacao[] = [];
     private negociacoes: Negociacao[] = [];
 
-    adiciona(negociacao: Negociacao){
+    public adiciona(negociacao: Negociacao){
         this.negociacoes.push(negociacao)
     }
 
     // lista(): Negociacao<ReadonlyArray>
-    listar(): readonly Negociacao[] {
+    public listar(): readonly Negociacao[] {
         return this.negociacoes
     }
 }
