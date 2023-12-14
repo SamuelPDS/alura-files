@@ -17,7 +17,7 @@ export class Negociacao {
     get volume() {
         return this.quantidade * this.valor;
     }
-    CriaDe(dateString, quantidadeString, valorString) {
+    static CriaDe(dateString, quantidadeString, valorString) {
         const exp = /-/g;
         const date = new Date(dateString.replace(exp, ','));
         const quantidade = parseInt(quantidadeString);

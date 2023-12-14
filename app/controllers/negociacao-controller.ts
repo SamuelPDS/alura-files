@@ -23,7 +23,11 @@ export class NegociacaoController{
     }
 
     public adiciona(): void {
-            const negociacao = Negociacao.criaDe;
+            const negociacao = Negociacao.CriaDe(
+                this.inputData.value,
+                this.inputQuantidade.value,
+                this.inputValor.value
+            )
             if(!this.DiaUtl(negociacao.data)){
                 this.mensageView.update('Apenas negociações em dias úteis são aceitas');
                 return;
@@ -55,7 +59,7 @@ export class NegociacaoController{
         this.mensageView.update('Negociação adicionada com sucesso');
     }
 
-    private DiaUtl(date: Date){
+    public DiaUtl(date: Date){
         return date.getDay() > DiasDaSemana.DOMINGO && date.getDay() < DiasDaSemana.SABADO;
     } 
 }
