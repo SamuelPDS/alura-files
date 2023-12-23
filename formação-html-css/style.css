@@ -3,21 +3,39 @@ body{
     color: #F6F6F6;
 }
 
-h1 {
+main{
+width: 60%;
+height: 100%;
+display: flex;
+margin-top: 5rem;
+margin-left: 250px;
+}
+
+
+#emphasis {
+    color: #22D4FD;
+    border: 1px solid #F6F6F6;
+}
+
+.articles{
+margin-top: 50px;
+ margin-left: 50px;
+}
+
+a { 
+    width: 20%;
+    justify-content: center;
+    background-color: #22D4FD;
+    color: #000000;
+    text-decoration: none;
+    padding: 16px;
+    gap: 50px;
+    border-radius: 0.6rem;
     
-    /* Adicionar mais estilos conforme necessário */
 }
-p {
-    
-    /* Adicionar mais estilos conforme necessário */
-}
-a {
-    background-color: deepskyblue;
-    color: rgb(0, 0, 0);
-    border: none;
-    /* Adicionar mais estilos conforme necessário */
-}
+
 img {
-    /* Adicionar estilos para formatar a imagem */
+width: 360px;
+height: auto;
 }
 /* Adicionar mais estilos conforme necessário */
