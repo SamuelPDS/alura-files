@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.titulo-destaque {
+    color: blueviolet;
+}
+
+.texto-destaque {
+    color: rgb(0, 0, 250);
+    width: 10%;
+    margin: 10px 5px;
+    border: 1px solid #000000;
+    padding: 5px 2px;
+}
+
+.urgente {
+    color: red;
+}
