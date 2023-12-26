@@ -1,28 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body{
+    height: 100vh;
+    box-sizing: border-box;
     background-color: #000000;
     color: #F6F6F6;
 }
 
+.apresentation {
+    margin: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
 main{
-width: 60%;
+/* width: 60%;
 height: 100%;
 display: flex;
 margin-top: 5rem;
-margin-left: 250px;
+margin-left: 250px; */
 }
 
 
-#emphasis {
+.strong-title {
     color: #22D4FD;
     border: 1px solid #F6F6F6;
 }
 
-.articles{
+/* .articles{
 margin-top: 50px;
  margin-left: 50px;
-}
+} */
 
-a { 
+/* a {
     width: 20%;
     justify-content: center;
     background-color: #22D4FD;
@@ -31,11 +46,10 @@ a {
     padding: 16px;
     gap: 50px;
     border-radius: 0.6rem;
-    
-}
+
+} */
 
 img {
-width: 360px;
-height: auto;
+height: 400px;
 }
 /* Adicionar mais estilos conforme necessário */
