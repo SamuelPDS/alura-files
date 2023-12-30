@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --primary-color: #161A30;
+    --secondary-color: #ffffff;
+    --terciary-color: #fddb9f;
+    --hover-color: #31304D;
+
+    --primary-font: 'Krona One', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body{
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.apresentation {
+    padding: 5% 10% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentation_content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 580px;
+}
+
+.header {
+    padding: 2% 0 0 10%;
+}
+.header_menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header_menu_links {
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--terciary-color);
+    text-decoration: none;
+}
+
+.apresentation_content_title {
+    font-family: var(--primary-font);
+    font-size: 32px;
+}
+
+.strong-title {
+    color: var(--terciary-color);
+}
+.apresentation_content_text {
+    font-family: var(--secondary-font);
+    font-size: 16px;
+}
+
+.apresentation_links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+} 
+
+.apresentation_links_h2 {
+font-family: var(--primary-font);
+font-weight: 400;   
+font-size: 16px;
+}
+
+.apresentation_links_link {
+    font-family: var(--secondary-font);
+    padding: 21px 0;
+    /* background-color: #22D4FD; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 371px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid var(--terciary-color);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.apresentation_links_link:hover {
+    border-radius: 8px;
+    border: 2px solid var(--terciary-color);
+    background: var(--hover-color);
+    box-shadow: 5px 10px var(--terciary-color);
+}
+
+.apresentation_links_profile_img {
+height: 400px;
+}
+
+.footer{
+    padding: 20px;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    background-color: var(--terciary-color);
+    text-align: center;
+    font-weight: 400;
+}
+
