@@ -109,6 +109,7 @@ font-size: 16px;
 
 .apresentation_img {
    width: 50%;
+   border-radius: 1rem;
 }
 
 .footer{
