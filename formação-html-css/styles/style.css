@@ -28,13 +28,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 
 .apresentation_content {
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    width: 580px;
+    gap: 2rem;
+    width: 50%;
 }
 
 .header {
@@ -55,7 +56,7 @@ body{
 
 .apresentation_content_title {
     font-family: var(--primary-font);
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .strong-title {
@@ -63,7 +64,7 @@ body{
 }
 .apresentation_content_text {
     font-family: var(--secondary-font);
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .apresentation_links{
@@ -80,18 +81,18 @@ font-weight: 400;
 font-size: 16px;
 }
 
-.apresentation_links_link {
+.apresentation_links_navegacao {
     font-family: var(--secondary-font);
     padding: 21px 0;
     /* background-color: #22D4FD; */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 371px;
+    width: 50%;
     text-align: center;
     border-radius: 8px;
     border: 2px solid var(--terciary-color);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     color: var(--secondary-color);
@@ -104,8 +105,9 @@ font-size: 16px;
     box-shadow: 5px 10px var(--terciary-color);
 }
 
-.apresentation_links_profile_img {
-height: 400px;
+
+.apresentation_img {
+   width: 50%;
 }
 
 .footer{
@@ -115,5 +117,13 @@ height: 400px;
     background-color: var(--terciary-color);
     text-align: center;
     font-weight: 400;
+}
+
+
+@media (max-width: 890px) {
+    .apresentation {
+        flex-direction: column-reverse;
+
+    }
 }
 
