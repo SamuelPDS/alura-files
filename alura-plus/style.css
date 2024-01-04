@@ -1,0 +1,61 @@
+:root{
+    --white-primary: #FFFFFF;
+    --gray-secondary: ##C0C0C0;
+    --blue-btn: #167BF7;
+    --red-terciary: #EC2F46;
+    --background-color: #040814;
+
+    --principal-font: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--white-primary);
+    font-family: var(--principal-font);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.principal {
+    background-image: url("assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container { 
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+.container___title {
+    font-size: 1.75rem;
+}
+
+.container__img{
+    width: 20%;
+}
+
+.container__btn {
+    padding: 1em;
+    display: block;
+    background-color: var(--blue-btn);
+    text-decoration: none;
+    color: var(--white-primary);
+    border-radius: 5px;
+}
+
+.btn_secundario {
+   background-color: transparent; 
+   border: 2px solid var(--white-primary);
+}
+
+.container__notice {
+    font-size: .75rem;
+    color: var(--gray-secondary);
+}
