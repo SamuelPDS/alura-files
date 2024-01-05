@@ -66,3 +66,34 @@ body {
     font-size: .75rem;
     color: var(--gray-secondary);
 }
+
+
+.secondary {
+    margin: 0 5rem;
+    align-items: center;
+}
+
+.container__img {
+    width: 80%;
+}
+
+.title__description {
+    margin-bottom: 0.2rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.text__description {
+    margin-top: 0.3rem;
+    color: var(--gray-secondary);
+}
+
+.btn_secondary {
+    margin-top: 2rem;
+    width: 30%;
+    text-align: center;
+}
+
+.container__description {
+    padding: 1rem;
+}
