@@ -2,6 +2,7 @@
     --white-primary: #FFFFFF;
     --gray-secondary: ##C0C0C0;
     --blue-btn: #167BF7;
+    --btn-hover: #398ef7;
     --red-terciary: #EC2F46;
     --background-color: #040814;
 
@@ -19,6 +20,8 @@ body {
     font-family: var(--principal-font);
     font-size: 1rem;
     font-weight: 400;
+
+    transition: 1seg;
 }
 
 .principal {
@@ -57,6 +60,12 @@ body {
     border-radius: 5px;
 }
 
+.container__btn:hover {
+    background-color: var(--btn-hover);
+    color: var(--background-color);
+    font-weight: bold;
+}
+
 .btn_secundario {
    background-color: transparent; 
    border: 2px solid var(--white-primary);
@@ -77,6 +86,10 @@ body {
     width: 80%;
 }
 
+.container__description_img {
+    margin-left: 2rem;
+}
+
 .title__description {
     margin-bottom: 0.2rem;
     font-size: 3rem;
@@ -89,11 +102,75 @@ body {
 }
 
 .btn_secondary {
-    margin-top: 2rem;
-    width: 30%;
-    text-align: center;
+    margin-top: 1rem;
+    display: inline-block;
 }
 
 .container__description {
     padding: 1rem;
+}
+
+.devices {
+    text-align: center;
+}
+
+.devices__title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white-primary);
+}
+
+.devices__list {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.list__item {
+    font-size: 2rem;
+    color: var(--white-primary);
+}
+
+.footer {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.footer__logo {
+    margin: 4rem 0;
+}
+
+.footer__list {
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.list__link_link {
+    font-size: 1rem;
+    color: var(--white-primary);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.list__link_link:hover {
+    color: var(--blue-btn);
+}
+
+.list__link_link:active{
+    color: #EC2F46;
+}
+
+.footer__text{
+    margin: 1rem 0;
+}
+
+.footer__text_text {
+    padding: 1rem 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--gray-secondary);
+
 }
