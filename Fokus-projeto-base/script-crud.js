@@ -2,6 +2,7 @@
 
 const btnAddTask = document.querySelector('.app__button--add-task');
 const formAddTask = document.querySelector('.app__form-add-task');
+const formCancelTask = document.querySelector('.app__form-footer__button--cancel');
 const textArea = document.querySelector('.app__form-textarea');
 const ulTask = document.querySelector('.app__section-task-list');
 const tasks = JSON.parse(localStorage.getItem('tasks')) || []
@@ -72,6 +73,12 @@ formAddTask.addEventListener('submit', (e) => {
     formAddTask.classList.add('hidden');
 
 })
+
+formCancelTask.onclick = () => {
+    textArea.value = '';
+    formAddTask.classList.add('hidden')
+}
+
 
 tasks.forEach(task => {
     const taskElement = createTaskElement(task);
