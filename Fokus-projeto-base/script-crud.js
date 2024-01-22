@@ -26,6 +26,12 @@ function createTaskElement(task){
 
     const button = document.createElement('button');
     const imgButton = document.createElement('img');
+
+    button.onclick = () => {
+        const newDescription = prompt("Qual é o novo nome da tarefa?");
+        paragraph.textContent = newDescription;
+    }
+
     imgButton.setAttribute('src', 'imagens/edit.png');
     imgButton.classList.add('class', 'app_button-edit')
 
