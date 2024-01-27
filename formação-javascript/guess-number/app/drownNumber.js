@@ -1,7 +1,7 @@
 const smallerElement = document.querySelector('#smaller-number');
 const biggerElement = document.querySelector('#bigger-number');
 const smallerValue = 0;
-const biggerValue = 100;
+const biggerValue = 1000;
 const secretNumber = GenerateRandomNum()
 
 function GenerateRandomNum() {
