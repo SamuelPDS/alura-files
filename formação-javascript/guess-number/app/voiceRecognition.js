@@ -1,3 +1,5 @@
+const guessElemet = document.querySelector('#guess');
+
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
@@ -7,5 +9,16 @@ recognition.start();
 recognition.addEventListener('result', onSpeak)
 
 function onSpeak(e) {
-    console.log(e.results)
+    const guess = e.results[0] [0].transcript
+    showGuessOnScreen(guess)
+    checkIfGuessIsValid(guess)
 }
+
+function showGuessOnScreen(guess) {
+    guessElemet.innerHTML = `
+        <div> You said </div>
+        <span class="box"> ${guess}</span>
+    `
+}
+
+recognition.addEventListener('end', () => recognition.start())
