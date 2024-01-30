@@ -28,6 +28,12 @@ body {
 
 /* CABEÇALHO */
 
+.main-container {
+display: grid;
+grid-template-columns: 20% auto;
+grid-template-rows: 1000px auto;
+}
+
 .cabecalho__container {
     background-color: var(--branco);
     height: 80px;
@@ -154,12 +160,12 @@ body {
 
   .sidebar__lateral__container {
     margin-top: 5rem;
-    width: 20%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    grid-column: 1;
+    grid-row: 1;
   }
 
 
@@ -214,6 +220,7 @@ body {
     right: 0;
     margin-left: 12rem;
     grid-column: 2;
+    grid-row: 2;
     /* transition: transform 0.5s ease-in-out;
     transform: translateX(0); */
 }
@@ -251,6 +258,8 @@ body {
 .videos__container {
     color: black;
     padding: 153px 20px 10px 20px;
+    grid-row: 1;
+    grid-column: 2;
 }
 
 iframe{
