@@ -35,6 +35,8 @@ body {
     padding: 0 25px;
 }
 
+
+
 .logo__item {
     padding: 15px 0px;
     cursor: pointer;
@@ -151,12 +153,13 @@ body {
   }
 
   .sidebar__lateral__container {
-    width: 40%;
     margin-top: 5rem;
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    grid-column: 1;
   }
 
 
@@ -194,7 +197,7 @@ body {
   .sidebar__lateral__content_after {
     font-weight: 500;
     margin-left: 1rem;
-    width: 90%;
+    width: 100%;
     border-bottom: 2px solid var(--azul-escuro);
   }
 
@@ -209,7 +212,8 @@ body {
     position: fixed;
     top: 80px;
     right: 0;
-    left: 0;
+    margin-left: 12rem;
+    grid-column: 2;
     /* transition: transform 0.5s ease-in-out;
     transform: translateX(0); */
 }
@@ -279,7 +283,7 @@ iframe{
 @media(min-width: 834px) {
 
     body {
-        height: 100vh;
+        height: 100%;
     }
 
     /* ESTILOS DA SECAO SUPERIOR */
