@@ -1,4 +1,5 @@
 function showBooksInScreen(bookList) {
+    elementToInsertElements.innerHTML = ''
     bookList.forEach(book => {
         elementToInsertElements.innerHTML += `
         <div class="livro">

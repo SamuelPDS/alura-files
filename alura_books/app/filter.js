@@ -17,14 +17,11 @@ function filterBooks() {
 const btnElement = document.getElementById(this.id)
 const category = btnElement.value;
 let booksToShow = books.filter(book =>{
-    return book.categoria == category //retirar return caso {} não existir
-    
-})  
+    return book.categoria == category //retirar return caso {} não existir    
+}) 
 if(category == '') {
     console.error('Books do not have category')
-}   else {
-    console.table(booksToShow)
+} else {
+    showBooksInScreen(booksToShow)
 }
-
-
 }
