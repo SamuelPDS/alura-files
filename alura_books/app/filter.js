@@ -5,11 +5,6 @@ const btnData = document.querySelector('.btn-dados')
 const btnAvaliable = document.querySelector('.btn-disponiveis')
 const btnOrdenation = document.querySelector('.btn-ordenacao')
 
-const frontTag = btnFront.getAttribute('value')
-const backTag = btnBack.getAttribute('value')
-const dataTag = btnData.getAttribute('value')
-
-
 btns.forEach((btn) => 
 btn.addEventListener('click', filterBooks))
 
@@ -20,8 +15,17 @@ let booksToShow = books.filter(book =>{
     return book.categoria == category //retirar return caso {} não existir    
 }) 
 if(category == '') {
-    console.error('Books do not have category')
+    // console.error('Books do not have category')
 } else {
     showBooksInScreen(booksToShow)
 }
+}
+
+btnAvaliable.addEventListener('click', showAvailableBooks)
+
+function showAvailableBooks() {
+    let availableBooks = books.filter(book => {
+        return book.quantidade > 0
+    })   
+     showBooksInScreen(availableBooks)
 }
