@@ -21,20 +21,23 @@ if(category == '') {
 }
 }
 
-function ShowTotalValueBooks() {
+btnAvaliable.addEventListener('click', showAvailableBooks)
+
+function ShowTotalValueBooks(priceBooksTotal) {
     totalBooksPrice.innerHTML = `
     <div class="livros__disponiveis">
-    <p>Todos os livros disponíveis por R$ <span id="valor">299,00</span></p>
+    <p>Todos os livros disponíveis por R$ <span id="valor">${priceBooksTotal}</span></p>
   </div>
     `
 }
 
-btnAvaliable.addEventListener('click', showAvailableBooks)
 
 function showAvailableBooks() {
     let availableBooks = books.filter(book => {
         return book.quantidade > 0
     })   
      showBooksInScreen(availableBooks)
-      ShowTotalValueBooks()
+     const priceBooksTotal = PriceBooksSum(availableBooks)
+     ShowTotalValueBooks(priceBooksTotal)
+        
 }
