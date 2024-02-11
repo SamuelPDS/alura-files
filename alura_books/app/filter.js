@@ -21,6 +21,14 @@ if(category == '') {
 }
 }
 
+function ShowTotalValueBooks() {
+    totalBooksPrice.innerHTML = `
+    <div class="livros__disponiveis">
+    <p>Todos os livros disponíveis por R$ <span id="valor">299,00</span></p>
+  </div>
+    `
+}
+
 btnAvaliable.addEventListener('click', showAvailableBooks)
 
 function showAvailableBooks() {
@@ -28,4 +36,5 @@ function showAvailableBooks() {
         return book.quantidade > 0
     })   
      showBooksInScreen(availableBooks)
+      ShowTotalValueBooks()
 }

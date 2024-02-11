@@ -1,4 +1,7 @@
+const totalBooksPrice = document.getElementById('valor_total_livros_disponiveis')
+
 function showBooksInScreen(bookList) {
+  totalBooksPrice.innerHTML = ''
     elementToInsertElements.innerHTML = ''
     bookList.forEach(book => {
       // let availability = checkBookAvailiability(book)
