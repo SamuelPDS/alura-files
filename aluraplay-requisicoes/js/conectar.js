@@ -5,7 +5,8 @@ async function listaVideos() {
     return conexaoEmJSON;
 }
 
-    
+
+
 async function criaVideo(titulo, descricao, url, imagem) {
     try {
         const res = await fetch('http://localhost:3000/videos', {
