@@ -5,6 +5,34 @@ async function listaVideos() {
     return conexaoEmJSON;
 }
 
+    
+async function criaVideo(titulo, descricao, url, imagem) {
+    try {
+        const res = await fetch('http://localhost:3000/videos', {
+            method: "POST",
+            headers: {
+                "Content-type" : "aplication/json"
+            },
+            body: JSON.stringify({
+                titulo : titulo,
+                descricao: `${descricao} mil visualizações`,
+                url: url,
+                imagem: imagem
+            }),
+        },
+        );
+
+        const resData = await res.json();
+        return resData;
+
+    } catch (err) {
+        console.log(err.message)
+    }
+}    
+
+
+
 export const conectarApi = {
-    listaVideos
+    listaVideos,
+    criaVideo
 }

@@ -20,6 +20,7 @@
 }
 
 .formulario__titulo {
+    margin-top: 3rem;
     color: var(--azul-medio);
     font-weight: bold;
     font-size: 21px;
