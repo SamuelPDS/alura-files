@@ -12,7 +12,7 @@ function constroiCard(titulo, descricao, url, imagem) {
     allowfullscreen></iframe>
     <div class="descricao-video">
         <img src=${imagem} alt="logo canal alura">
-        <h3>${titulo}</h3>
+        <h3 data-titulo>${titulo}</h3>
         <p>${descricao}</p>
     </div>
     `
