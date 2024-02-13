@@ -1,4 +1,4 @@
-const searchBar = document.querySelector('.pesquisar__input');
+const searchBar = document.querySelector('[data-pesquisa]');
 
 searchBar.addEventListener('input', filterVideo)
 
