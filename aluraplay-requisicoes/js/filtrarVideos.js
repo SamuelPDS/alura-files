@@ -17,5 +17,8 @@ async function filterVideo() {
         } else {
             video.style.display = "block";
         }   
-}
+        if(listVideos.length== 0) {
+            alert('não há vídeo') 
+    }
+    }
     
