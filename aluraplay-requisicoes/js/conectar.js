@@ -8,8 +8,7 @@ async function listaVideos() {
 
 
 async function criaVideo(titulo, descricao, url, imagem) {
-    try {
-        const res = await fetch('http://localhost:3000/videos', {
+        const res = await fetch('http://localhost:3000/vide', {
             method: "POST",
             headers: {
                 "Content-type" : "aplication/json"
@@ -20,15 +19,12 @@ async function criaVideo(titulo, descricao, url, imagem) {
                 url: url,
                 imagem: imagem
             }),
-        },
-        );
-
+        });
+         if(!res.ok) {
+            throw new Error('Não foi possível carregar o vídeo')
+         }
         const resData = await res.json();
         return resData;
-
-    } catch (err) {
-        console.log(err.message)
-    }
 }    
 
 /**
