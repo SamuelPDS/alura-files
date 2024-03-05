@@ -1,6 +1,6 @@
 import ehUmCpf from "./valida-cpf.js";
 import ehMaiordeIdade from "./valida-idade.js";
-const camposForm = document.querySelectorAll("[required]");
+ const camposForm = document.querySelectorAll("[required]");
 const form = document.querySelector('[data-formulario]');
 
 form.addEventListener('submit', (e) => {
