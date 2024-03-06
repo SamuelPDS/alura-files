@@ -22,9 +22,12 @@ const data = inputData.value;
 
 if(transacaoValor == "Depósito") {
     saldo += valor;
+
 } else if (transacaoValor == "Transferência") {
     saldo -= valor;
 }
+
+elementoSaldo.textContent = saldo.toFixed(2).replace('.', ',')
 
 if(valor < 0) {
     alert("Insira um valor válido!")
@@ -49,9 +52,9 @@ function createTransaction(transacaoValor, valor, data) {
         <div class="transacao-item">
             <div class="transacao-info">
                 <span class="tipo">${transacaoValor}</span>
-                <strong class="valor">${valor}</strong>
+                <strong class="valor">R$${valor}</strong>
             </div>
-            <time class="data">R$${data}</time>
+            <time class="data">${data}</time>
         </div>
         <div class="transacao-item">
             <div class="transacao-info">
