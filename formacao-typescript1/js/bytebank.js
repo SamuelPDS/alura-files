@@ -4,6 +4,7 @@ const elementoForm = document.querySelector('.block-nova-transacao form')
 const inputTipoTransacao = document.querySelector('#tipoTransacao');
 const inputValor = document.querySelector("#valor");
 const inputData = document.querySelector("#data");
+const elementoTransacao = document.querySelector(".registro-transacoes")
 
 elementoSaldo.textContent = saldo.toFixed(2).replace('.', ',')
 
@@ -30,13 +31,35 @@ if(valor < 0) {
 }
 
 const newTransaction = {
-    tipoTransacaoValor: transacaoValor,
+    transacaoValor: transacaoValor,
     valor: valor,
     data: data
 }
     console.log(newTransaction)
     elementoForm.reset();
 
- createTransaction(newTransaction)   
+ createTransaction(transacaoValor, valor, data)   
 });
 
+
+function createTransaction(transacaoValor, valor, data) {
+    elementoTransacao.innerHTML += `    
+    <div class="transacoes-group">
+        <strong class="mes-group">Setembro</strong>
+        <div class="transacao-item">
+            <div class="transacao-info">
+                <span class="tipo">${transacaoValor}</span>
+                <strong class="valor">${valor}</strong>
+            </div>
+            <time class="data">R$${data}</time>
+        </div>
+        <div class="transacao-item">
+            <div class="transacao-info">
+                <span class="tipo">Transferência</span>
+                <strong class="valor">-R$ 58,00</strong>
+            </div>
+            <time class="data">02/09</time>
+        </div>
+    </div>
+    `
+}
