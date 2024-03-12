@@ -1,12 +1,15 @@
-let saldo = 3000;
-const elementoSaldo = document.querySelector('.valor')
-const elementoForm = document.querySelector('.block-nova-transacao form')
-const inputTipoTransacao = document.querySelector('#tipoTransacao');
-const inputValor = document.querySelector("#valor");
-const inputData = document.querySelector("#data");
-const elementoTransacao = document.querySelector(".registro-transacoes")
 
-elementoSaldo.textContent = saldo.toFixed(2).replace('.', ',')
+
+let saldo = 3000 as number;
+
+const elementoSaldo  = document.querySelector('.valor') as HTMLElement;
+const elementoForm = document.querySelector('.block-nova-transacao form') as HTMLFormElement;
+const inputTipoTransacao = document.querySelector('#tipoTransacao') as HTMLSelectElement;
+const inputValor = document.querySelector("#valor") as HTMLInputElement;
+const inputData = document.querySelector("#data") as HTMLInputElement;
+const elementoTransacao = document.querySelector(".registro-transacoes") as HTMLElement;
+
+elementoSaldo.textContent = saldo.toString() //.toFixed(2).replace('.', ',')
 
 elementoForm.addEventListener('submit', function(e) {
  e.preventDefault();
@@ -16,18 +19,18 @@ elementoForm.addEventListener('submit', function(e) {
     return;
 } 
 
-const transacaoValor = inputTipoTransacao.value
-const valor = inputValor.value;
-const data = inputData.value;
+const transacaoValor: string = inputTipoTransacao.value
+const valor: number = inputValor.valueAsNumber;
+const data: Date = new Date (inputData.value);
 
 if(transacaoValor == "Depósito") {
     saldo += valor;
 
-} else if (transacaoValor == "Transferência") {
+} else if (transacaoValor == "Transferência" || "Pagamento de Boleto") {
     saldo -= valor;
 }
 
-elementoSaldo.textContent = saldo.toFixed(2).replace('.', ',')
+elementoSaldo.textContent = saldo.toString()  //.toFixed(2).replace('.', ',')
 
 if(valor < 0) {
     alert("Insira um valor válido!")
@@ -45,7 +48,7 @@ const newTransaction = {
 });
 
 
-function createTransaction(transacaoValor, valor, data) {
+function createTransaction(transacaoValor: string, valor: number, data: Date) {
     elementoTransacao.innerHTML += `    
     <div class="transacoes-group">
         <strong class="mes-group">Setembro</strong>
