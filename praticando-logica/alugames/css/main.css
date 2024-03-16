@@ -88,6 +88,10 @@
     margin-bottom: 1rem;
 }
 
+.dashboard__item__img-content {
+    border-radius: .5rem;
+}
+
 .dashboard__item__img--rented {
     position: relative;
 }
