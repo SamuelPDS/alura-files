@@ -1,11 +1,9 @@
-let saldo = 3000;
-const elementoSaldo = document.querySelector('.valor');
+import { tipoTransacao } from "./enums/tipoTransacao";
 const elementoForm = document.querySelector('.block-nova-transacao form');
 const inputTipoTransacao = document.querySelector('#tipoTransacao');
 const inputValor = document.querySelector("#valor");
 const inputData = document.querySelector("#data");
 const elementoTransacao = document.querySelector(".registro-transacoes");
-elementoSaldo.textContent = saldo.toString(); //.toFixed(2).replace('.', ',')
 elementoForm.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!elementoForm.checkValidity()) {
@@ -15,10 +13,15 @@ elementoForm.addEventListener('submit', function (e) {
     const transacaoValor = inputTipoTransacao.value;
     const valor = inputValor.valueAsNumber;
     const data = new Date(inputData.value);
-    if (transacaoValor == "Depósito") {
+    //    const novaTransacao: Transacao = {
+    //         transacaoValor = inputTipoTransacao.value,
+    //         valor = inputValor.valueAsNumber,
+    //         data  = new Date (inputData.value)
+    //    }
+    if (transacaoValor == "Boleto") {
         saldo += valor;
     }
-    else if (transacaoValor == "Transferência" || "Pagamento de Boleto") {
+    else if (transacaoValor == tipoTransacao.DEPOSITO || tipoTransacao.TRANSFERENCIA) {
         saldo -= valor;
     }
     elementoSaldo.textContent = saldo.toString(); //.toFixed(2).replace('.', ',')
@@ -36,22 +39,22 @@ elementoForm.addEventListener('submit', function (e) {
 });
 function createTransaction(transacaoValor, valor, data) {
     elementoTransacao.innerHTML += `    
-    <div class="transacoes-group">
-        <strong class="mes-group">Setembro</strong>
-        <div class="transacao-item">
-            <div class="transacao-info">
-                <span class="tipo">${transacaoValor}</span>
-                <strong class="valor">R$${valor}</strong>
-            </div>
-            <time class="data">${data}</time>
-        </div>
-        <div class="transacao-item">
-            <div class="transacao-info">
-                <span class="tipo">Transferência</span>
-                <strong class="valor">-R$ 58,00</strong>
-            </div>
-            <time class="data">02/09</time>
-        </div>
-    </div>
-    `;
+       <div class="transacoes-group">
+           <strong class="mes-group">Setembro</strong>
+           <div class="transacao-item">
+               <div class="transacao-info">
+                   <span class="tipo">${transacaoValor}</span>
+                   <strong class="valor">R$${valor}</strong>
+               </div>
+               <time class="data">${data}</time>
+           </div>
+           <div class="transacao-item">
+               <div class="transacao-info">
+                   <span class="tipo">Transferência</span>
+                   <strong class="valor">-R$ 58,00</strong>
+               </div>
+               <time class="data">02/09</time>
+           </div>
+       </div>
+       `;
 }
