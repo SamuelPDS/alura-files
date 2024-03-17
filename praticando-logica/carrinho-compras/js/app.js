@@ -6,19 +6,12 @@ const quantelement = document.querySelector('#quantidade')
 
 formTag.addEventListener('submit', e => {
     e.preventDefault();
-    const formValues = {
-        "produto" : e.target.elements["produto"].value,
-        "quantidade" : e.target.elements["quantidade"].value
-    }
+        const productValue = e.target.elements["produto"].value
+        const quantValue = e.target.elements["quantidade"].value
 
-    console.log(formValues)
-
-    // console.log(btnElement[0])
-    // if (btnElement[0]) {
-    //     console.log("adiciona")
-        
-    // } else {
-    //     console.log("limpa")
-    // }
-    
+    post(productValue, quantValue)
 } )
+
+function post(product, quant) {
+    
+}
