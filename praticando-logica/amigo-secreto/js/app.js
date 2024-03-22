@@ -1,27 +1,44 @@
 const formElement = document.querySelector('.form')
 const btnSendData = formElement.getElementsByClassName('button')[0]
 const friendsList = document.querySelector('#lista-amigos')
+let formInput = document.querySelector('.form__input');
+let names = []
 
 // console.log(formElement)
 
 formElement.addEventListener('submit', e => {
-    const data = e.target.elements['nome-amigo'].value
-    e.preventDefault()
-    if(e.submitter == btnSendData) {
-        Post(data)
-    } else {
-       console.log('não é igual!') 
-    }
-    // console.log(e.submitter)
-    // console.log(formElement.getElementsByClassName('button')[0])
+    // if(friendsList.textContent == '') {
+    //     alert('Insira um valor válido!')
+    // } else {
+
+    // }
+    let data = e.target.elements['nome-amigo'].value
+        e.preventDefault()
+        if(e.submitter == btnSendData) {
+            Post(data)
+        } else {
+        Draw(names)
+        }
+
 })
 
 function Post(data) {
-    if(friendsList.textContent == ''){
+// let dataFriendList = friendsList.textContent ----- variável não está funcionando
+    if( friendsList.textContent == ''){
         friendsList.textContent += data
+        names.push(friendsList.textContent)
     } else {
-        friendsList.textContent += ', ' + data 
+        friendsList.textContent += ', ' + data
+        names.push(friendsList.textContent)
     }
 
-    console.log(friendsList.textContent)
+    formElement.reset()
+    console.log(names)
 }
+
+
+// function Draw(names){
+    
+//     let randomName = names[Math.floor(Math.random() * names.length)]
+//     console.log(randomName)
+// }
