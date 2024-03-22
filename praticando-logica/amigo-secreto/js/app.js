@@ -23,13 +23,13 @@ formElement.addEventListener('submit', e => {
 })
 
 function Post(data) {
-// let dataFriendList = friendsList.textContent ----- variável não está funcionando
+// let dataFriendList = friendsList.textContent //----- variável não está funcionando
     if( friendsList.textContent == ''){
         friendsList.textContent += data
-        names.push(friendsList.textContent)
+        names.push(formInput.value)
     } else {
         friendsList.textContent += ', ' + data
-        names.push(friendsList.textContent)
+        names.push(formInput.value)
     }
 
     formElement.reset()
@@ -37,8 +37,8 @@ function Post(data) {
 }
 
 
-// function Draw(names){
+function Draw(names){
     
-//     let randomName = names[Math.floor(Math.random() * names.length)]
-//     console.log(randomName)
-// }
+    let randomName = names[Math.floor(Math.random() * names.length)]
+    console.log(randomName)
+}
