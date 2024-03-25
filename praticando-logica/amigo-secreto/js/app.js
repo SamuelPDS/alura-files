@@ -35,25 +35,28 @@ function Post(data) {
     }
 
     formElement.reset()
-    console.log(names)
+  
 }
 
 
 function Draw(names){
-    for(i = 0; i< names.length; i++){
-        let nameDrawn = names[i]
-        let actualValue = []
-        let randomName = names[Math.floor(Math.random() * names.length)]
-        if(!actualValue.includes(randomName)) {
-            actualValue.push(randomName)
-        } else {
-            return randomName
-        }
+    let currentValue = names
+    // console.log(names.length)
+    for(let i = 0; i < names.length; i++){
+        console.log(names[i])
+        let nameDrawn = currentValue[i]
+        let randomNameId = Math.floor(Math.random() * currentValue.length)
+        let randomName = currentValue[randomNameId]
+        //console.log(randomName)
+        // console.log(currentValue)
         nameDrawnList.innerHTML += `
-        <p id="lista-sorteio">${nameDrawn} -> ${actualValue}</p>  
-        `
-        console.log('foi')
+        <p id="lista-sorteio">${nameDrawn} -> ${randomName}</p>  
+        `   
+        
+        console.log('feito')
+        // currentValue.splice(randomNameId, 1)
     }
+
 }
 
 
