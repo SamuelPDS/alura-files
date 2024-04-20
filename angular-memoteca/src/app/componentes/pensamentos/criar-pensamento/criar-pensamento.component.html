@@ -1,0 +1,89 @@
+<section class="container criar-pensamentos ff-inter">
+  <header class="header">
+    <h2>Adicione um <br> pensamento novo</h2>
+  </header>
+  <form>
+    <label for="pensamento">Pensamento</label>
+    <input
+    type="textarea"
+    name="pensamento"
+    class="input"
+    id="pensamento"
+    placeholder="Digite o pensamento">
+    <label for="autoria">Autoria ou fonte</label>
+    <input
+    type="text"
+    name="autoria"
+    class="input"
+    id="autoria"
+    placeholder="Digite a autoria ou fonte">
+
+    <label for="modelo">Selecione um modelo do card:</label>
+    <div class="container-radio">
+      <div class="radio-modelo">
+        <label for="modelo1">
+          <input
+          type="radio"
+          name="modelo-card"
+          id="modelo1"
+          value="modelo1"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 1</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo1 ff-roboto-mono">
+          <img src="assets/imagens/modelo1.png" alt="Aspas azul">
+          <p class="conteudo">Aqui vai o conteudo</p>
+          <p class="autoria"><b>Aqui vai a autoria</b></p>
+        </div>
+      </div>
+      <div class="radio-modelo">
+        <label for="modelo2">
+          <input
+          type="radio"
+          name="modelo-card"
+          id="modelo2"
+          value="modelo2"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 2</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo2 ff-roboto-mono">
+          <img src="assets/imagens/modelo2.png" alt="Aspas azul claro">
+          <p class="conteudo">Aqui vai o conteudo</p>
+          <p class="autoria"><b>Aqui vai a autoria</b></p>
+        </div>
+      </div>
+      <div class="radio-modelo">
+        <label for="modelo3">
+          <input
+          type="radio"
+          name="modelo-card"
+          id="modelo3"
+          value="modelo3"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 3</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo3 ff-roboto-mono">
+          <img src="assets/imagens/modelo3.png" alt="Aspas verde">
+          <p class="conteudo">Aqui vai o conteudo</p>
+          <p class="autoria"><b>Aqui vai a autoria</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="acoes">
+      <button class="botao">Salvar</button>
+      <button class="botao-cancelar">Cancelar</button>
+    </div>
+  </form>
+</section>
