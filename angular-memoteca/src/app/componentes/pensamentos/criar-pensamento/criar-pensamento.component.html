@@ -9,14 +9,17 @@
     name="pensamento"
     class="input"
     id="pensamento"
-    placeholder="Digite o pensamento">
+    placeholder="Digite o pensamento"
+    [value]="card.pensamento">
+
     <label for="autoria">Autoria ou fonte</label>
     <input
     type="text"
     name="autoria"
     class="input"
     id="autoria"
-    placeholder="Digite a autoria ou fonte">
+    placeholder="Digite a autoria ou fonte"
+    [value]="card.autoria">
 
     <label for="modelo">Selecione um modelo do card:</label>
     <div class="container-radio">
@@ -36,8 +39,8 @@
         Prévia:
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="assets/imagens/modelo1.png" alt="Aspas azul">
-          <p class="conteudo">Aqui vai o conteudo</p>
-          <p class="autoria"><b>Aqui vai a autoria</b></p>
+          <p class="conteudo">{{ card.pensamento }}</p>
+          <p class="autoria"><b>{{ card.autoria }}</b></p>
         </div>
       </div>
       <div class="radio-modelo">

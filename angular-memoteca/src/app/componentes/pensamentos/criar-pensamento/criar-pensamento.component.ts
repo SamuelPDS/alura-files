@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarPensamentoComponent implements OnInit {
 
+  card = {
+    id : 1,
+    pensamento: 'Aprendendo BackEnd',
+    autoria: 'Samuel Charles'
+  }
+
   constructor() { }
 
   ngOnInit(): void {
