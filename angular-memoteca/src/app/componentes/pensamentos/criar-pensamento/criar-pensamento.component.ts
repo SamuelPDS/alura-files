@@ -10,12 +10,21 @@ export class CriarPensamentoComponent implements OnInit {
   card = {
     id : 1,
     pensamento: 'Aprendendo BackEnd',
-    autoria: 'Samuel Charles'
+    autoria: 'Samuel Charles',
+    modelo: 'modelo3'
   }
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  createThinking(){
+    alert("Pensamento adicionado")
+  }
+
+  onCancel() {
+    alert("Cancelado")
   }
 
 }

@@ -10,7 +10,7 @@
     class="input"
     id="pensamento"
     placeholder="Digite o pensamento"
-    [value]="card.pensamento">
+    [(ngModel)]="card.pensamento">
 
     <label for="autoria">Autoria ou fonte</label>
     <input
@@ -19,7 +19,7 @@
     class="input"
     id="autoria"
     placeholder="Digite a autoria ou fonte"
-    [value]="card.autoria">
+    [(ngModel)]="card.autoria">
 
     <label for="modelo">Selecione um modelo do card:</label>
     <div class="container-radio">
@@ -30,6 +30,7 @@
           name="modelo-card"
           id="modelo1"
           value="modelo1"
+          [(ngModel)]="card.modelo"
           >
           <div class="custom-radio">
             <span></span>
@@ -50,7 +51,7 @@
           name="modelo-card"
           id="modelo2"
           value="modelo2"
-          >
+          [(ngModel)]="card.modelo">
           <div class="custom-radio">
             <span></span>
           </div>
@@ -59,8 +60,8 @@
         Prévia:
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="assets/imagens/modelo2.png" alt="Aspas azul claro">
-          <p class="conteudo">Aqui vai o conteudo</p>
-          <p class="autoria"><b>Aqui vai a autoria</b></p>
+          <p class="conteudo">{{ card.pensamento }}</p>
+          <p class="autoria"><b>{{ card.autoria }}</b></p>
         </div>
       </div>
       <div class="radio-modelo">
@@ -70,7 +71,7 @@
           name="modelo-card"
           id="modelo3"
           value="modelo3"
-          >
+          [(ngModel)]="card.modelo">
           <div class="custom-radio">
             <span></span>
           </div>
@@ -79,14 +80,14 @@
         Prévia:
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="assets/imagens/modelo3.png" alt="Aspas verde">
-          <p class="conteudo">Aqui vai o conteudo</p>
-          <p class="autoria"><b>Aqui vai a autoria</b></p>
+          <p class="conteudo">{{ card.pensamento }}</p>
+          <p class="autoria"><b>{{ card.autoria }}</b></p>
         </div>
       </div>
     </div>
     <div class="acoes">
-      <button class="botao">Salvar</button>
-      <button class="botao-cancelar">Cancelar</button>
+      <button class="botao" (click)="createThinking()">Salvar</button>
+      <button class="botao-cancelar" (click)="onCancel()">Cancelar</button>
     </div>
   </form>
 </section>
