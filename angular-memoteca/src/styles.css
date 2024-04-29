@@ -24,6 +24,7 @@ h2 {
 
 .header {
   margin: 1rem auto 2rem;
+  text-align: center;
 }
 
 .container {
@@ -36,6 +37,7 @@ h2 {
 }
 
 .botao {
+  margin-top: 1rem;
   background: #154580;
   color: #ffffff;
   max-width: 270px;

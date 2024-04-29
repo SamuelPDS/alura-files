@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-criar-pensamento',
   templateUrl: './criar-pensamento.component.html',
   styleUrls: ['./criar-pensamento.component.css']
 })
+
 export class CriarPensamentoComponent implements OnInit {
 
   card = {
@@ -14,7 +16,7 @@ export class CriarPensamentoComponent implements OnInit {
     modelo: 'modelo3'
   }
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +26,7 @@ export class CriarPensamentoComponent implements OnInit {
   }
 
   onCancel() {
-    alert("Cancelado")
+    this.route.navigate([''])
   }
 
 }
