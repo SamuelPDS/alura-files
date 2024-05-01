@@ -10,7 +10,7 @@
     class="input"
     id="pensamento"
     placeholder="Digite o pensamento"
-    [(ngModel)]="card.pensamento">
+    [(ngModel)]="card.conteudo">
 
     <label for="autoria">Autoria ou fonte</label>
     <input
@@ -40,7 +40,7 @@
         Prévia:
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="assets/imagens/modelo1.png" alt="Aspas azul">
-          <p class="conteudo">{{ card.pensamento }}</p>
+          <p class="conteudo">{{ card.conteudo }}</p>
           <p class="autoria"><b>{{ card.autoria }}</b></p>
         </div>
       </div>
@@ -60,7 +60,7 @@
         Prévia:
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="assets/imagens/modelo2.png" alt="Aspas azul claro">
-          <p class="conteudo">{{ card.pensamento }}</p>
+          <p class="conteudo">{{ card.conteudo }}</p>
           <p class="autoria"><b>{{ card.autoria }}</b></p>
         </div>
       </div>
@@ -80,7 +80,7 @@
         Prévia:
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="assets/imagens/modelo3.png" alt="Aspas verde">
-          <p class="conteudo">{{ card.pensamento }}</p>
+          <p class="conteudo">{{ card.conteudo }}</p>
           <p class="autoria"><b>{{ card.autoria }}</b></p>
         </div>
       </div>
