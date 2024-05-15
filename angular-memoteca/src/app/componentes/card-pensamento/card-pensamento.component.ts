@@ -17,7 +17,7 @@ export class CardPensamentoComponent implements OnInit {
     id: 0,
     conteudo: '',
     autoria: '',
-    modelo: ''
+    modelo: 'modelo1'
   }
 
 verifiCardLength() {

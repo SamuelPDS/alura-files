@@ -1,6 +1,7 @@
 import { Pensamento } from './../pensamento';
 import { Component, Inject, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { PensamentosService } from 'src/app/services/pensamentos.service';
 
 
 @Component({
@@ -12,19 +13,21 @@ import { Route, Router } from '@angular/router';
 export class CriarPensamentoComponent implements OnInit {
 
   card: Pensamento = {
-    id : 1,
-    conteudo: 'Aprendendo BackEnd',
-    autoria: 'Samuel Charles',
-    modelo: 'modelo3'
+    conteudo: '',
+    autoria: '',
+    modelo: ''
   }
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private pensamentoService: PensamentosService) { }
 
   ngOnInit(): void {
   }
 
   createThinking(){
-    alert("Pensamento adicionado")
+    this.pensamentoService.createPensamentos(this.card).subscribe(res => {
+      alert("Pensamento adicionado")
+      this.route.navigate([''])
+    })
   }
 
   onCancel() {

@@ -9,6 +9,7 @@ import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
 import { MuralPensamentoComponent } from './componentes/pensamentos/mural-pensamento/mural-pensamento.component';
 import { CardPensamentoComponent } from './componentes/card-pensamento/card-pensamento.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,10 @@ import { CardPensamentoComponent } from './componentes/card-pensamento/card-pens
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
