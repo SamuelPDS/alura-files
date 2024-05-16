@@ -1,13 +1,7 @@
 {
   "pensamento": [
     {
-      "id": 1,
-      "conteudo": "Aprendendo Angular",
-      "autoria": "Samuel",
-      "modelo": "modelo2"
-    },
-    {
-      "id": 1,
+      "id": 2,
       "conteudo": "Aprendendo Angular",
       "autoria": "Samuel",
       "modelo": "modelo1"
@@ -16,13 +10,13 @@
       "conteudo": "Só sei que nada Sei",
       "autoria": "Sócrates",
       "modelo": "modelo3",
-      "id": 2
+      "id": 3
     },
     {
       "conteudo": "tste",
       "autoria": "teste",
       "modelo": "modelo3",
-      "id": 3
+      "id": 4
     }
   ]
 }

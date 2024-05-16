@@ -11,6 +11,7 @@ import { MuralPensamentoComponent } from './componentes/pensamentos/mural-pensam
 import { CardPensamentoComponent } from './componentes/card-pensamento/card-pensamento.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
+import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pe
     CriarPensamentoComponent,
     MuralPensamentoComponent,
     CardPensamentoComponent,
-    ExcluirPensamentoComponent
+    ExcluirPensamentoComponent,
+    EditarPensamentoComponent
   ],
   imports: [
     BrowserModule,

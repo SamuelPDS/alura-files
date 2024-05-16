@@ -27,5 +27,4 @@ verifiCardLength() {
     return 'pensamentop-p'
   }
 }
-
 }
