@@ -28,4 +28,8 @@ export class PensamentosService {
     return this.httpClient.get<Pensamento>(`${this.API_URL}/${id}`)
   }
 
+  putPensamentos(bodyPensamento: Pensamento) {
+    return this.httpClient.put<Pensamento>(`${this.API_URL}/${bodyPensamento.id}`, bodyPensamento)
+  }
+
 }
