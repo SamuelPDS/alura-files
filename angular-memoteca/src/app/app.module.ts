@@ -10,6 +10,7 @@ import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensam
 import { MuralPensamentoComponent } from './componentes/pensamentos/mural-pensamento/mural-pensamento.component';
 import { CardPensamentoComponent } from './componentes/card-pensamento/card-pensamento.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     RodapeComponent,
     CriarPensamentoComponent,
     MuralPensamentoComponent,
-    CardPensamentoComponent
+    CardPensamentoComponent,
+    ExcluirPensamentoComponent
   ],
   imports: [
     BrowserModule,

@@ -4,24 +4,6 @@
       "id": 1,
       "conteudo": "Aprendendo Angular",
       "autoria": "Samuel",
-      "modelo": "modelo1"
-    },
-    {
-      "id": 1,
-      "conteudo": "Aprendendo Angular",
-      "autoria": "Samuel",
-      "modelo": "modelo2"
-    },
-    {
-      "id": 1,
-      "conteudo": "Aprendendo Angular",
-      "autoria": "Samuel",
-      "modelo": "modelo3"
-    },
-    {
-      "id": 1,
-      "conteudo": "Aprendendo Angular",
-      "autoria": "Samuel",
       "modelo": "modelo2"
     },
     {
@@ -37,9 +19,9 @@
       "id": 2
     },
     {
-      "conteudo": "Teste",
-      "autoria": "Samuel",
-      "modelo": "",
+      "conteudo": "tste",
+      "autoria": "teste",
+      "modelo": "modelo3",
       "id": 3
     }
   ]

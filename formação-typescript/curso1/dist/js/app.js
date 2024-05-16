@@ -8,5 +8,5 @@ if (form) {
     });
 }
 else {
-    throw Error('Não foi possível iniciar a aplicação. Verifiqie se o form existe');
+    throw Error('Não foi possível iniciar a aplicação. Verifique se o form existe');
 }
