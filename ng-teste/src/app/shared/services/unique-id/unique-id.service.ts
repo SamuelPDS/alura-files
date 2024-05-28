@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 @Injectable()
 export class UniqueIdService {
   private numberOfGeneratedIds = 0;
+  static generateUniqueIdWithPrefix: any;
 
   public generateUniqueIdWithPrefix(prefix: string): string {
     if (!prefix) {
