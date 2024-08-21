@@ -34,8 +34,7 @@ describe(LikeWidgetComponent.name, () => {
   it('should not generate a Id when the same is defined at method param', () => {
     const component = fixture.componentInstance;
     component.id = 1;
-    fixture.detectChanges();
-    // fixture.detectChanges();
+    fixture.detectChanges(); //é recomendado inserir em todos os testes
     expect(component.id).toBe(1);
   })
 });
