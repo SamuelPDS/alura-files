@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES2022", //versão do JavaScript
+        "outDir": "dist/js/", //Onde ficarão os arquivos copilados do TS  
+        "noEmitOnError": true, //caso tenha erro, não irá gerar o arquivo js
+        // "noImplicitAny": true, // 
+        // "removeComments": true, //
+        // "strictNullChecks": true //
+    },
+
+    "include": [
+        "./src/**/*"  //caminho para procurar os arquivos TS
+    ]
+
+    
+}
